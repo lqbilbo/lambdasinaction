@@ -8,10 +8,9 @@ import java.util.Arrays;
 public class Book {
 
     public static void main(String[] args) {
+        //根据类型选择注解
         Author[] authors = Book.class.getAnnotationsByType(Author.class);
-        Arrays.asList(authors).stream().forEach(a -> {
-            System.out.println(a.name());
-        });
+        Arrays.asList(authors).stream().forEach(a -> System.out.println(a.name()));
     }
 
 }
